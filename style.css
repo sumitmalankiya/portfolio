@@ -1,0 +1,179 @@
+/* Reset & basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #1f1f1f;
+  padding: 2rem 1.5rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 2px solid #333;
+}
+
+.sidebar .profile h2 {
+  color: #00d8ff;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.sidebar .profile p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar nav ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a.active,
+.sidebar nav ul li a:hover {
+  color: #00ffcc;
+  background-color: #003344;
+}
+
+/* Main content */
+main {
+  margin-left: 250px;
+  padding: 2rem 3rem;
+  max-width: 900px;
+  flex: 1;
+}
+
+/* Sections */
+section {
+  margin-bottom: 4rem;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+section:nth-child(1) {
+  animation-delay: 0.2s;
+}
+section:nth-child(2) {
+  animation-delay: 0.4s;
+}
+section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+section:nth-child(4) {
+  animation-delay: 0.8s;
+}
+section:nth-child(5) {
+  animation-delay: 1s;
+}
+section:nth-child(6) {
+  animation-delay: 1.2s;
+}
+section:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+h1, h2, h3 {
+  color: #00d8ff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+  color: #00ffcc;
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: disc inside;
+  color: #ccc;
+  margin-left: 1rem;
+  line-height: 1.5;
+}
+
+.project, .experience {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: #00d8ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00ffcc;
+  text-decoration: underline;
+}
+
+/* Footer (optional) */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1f1f1f;
+  color: #888;
+  border-top: 1px solid #333;
+  margin-top: 4rem;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #333;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+  }
+}
